@@ -67,7 +67,7 @@ export default class List extends React.Component {
                 {
                     this.state.data.length
                         ? <HomeList data={this.state.data}/>
-                        : <div>加载中...</div>
+                        : ''
                 }
                 {
                     this.state.hasMore

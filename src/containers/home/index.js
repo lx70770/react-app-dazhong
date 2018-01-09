@@ -22,7 +22,7 @@ class Home extends React.Component {
     render() {
         return (
             <QueueAnim delay={600} >
-                <HomeHeader cityName={this.props.userinfo.cityName}/>
+                <HomeHeader cityName={this.props.userinfo.cityName} history={this.props.history}/>
                 <Category key="b" />
                 <Ad key="c" />
                 <List key="d"  cityName={this.props.userinfo.cityName}/>

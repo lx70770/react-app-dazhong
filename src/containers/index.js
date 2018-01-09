@@ -17,7 +17,6 @@ class App extends React.Component {
         if (cityName == null) {
             cityName = '北京';
         }
-        console.log(cityName);
         //将城市信息存储到 Redux 中
         this.props.userInfoActions.update({
             cityName: cityName

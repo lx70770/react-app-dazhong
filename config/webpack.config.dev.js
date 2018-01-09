@@ -263,7 +263,7 @@ module.exports = {
         hints: false,
     },
     devServer: {
-        //凡是'./api'开头的HTTP请求，都会被代理到localhost: {port} 上，由think.js提供mock数据。
+        //凡是'./api'开头的HTTP请求，都会被代理到localhost: {port} 上，由express提供mock数据。
         //think.js代码写在./mock目录中，启动命令为 npm run mock
         proxy: {
             '/api': {

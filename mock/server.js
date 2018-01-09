@@ -18,6 +18,17 @@ app.get('/api/homelist/:city/:page', (req, res) => {
     next();
 });
 
+let searchListData = require('./search/list.js');
+app.get('/api/search/:page/:city/:category/:keyword', (req, res) => {
+    "use strict";
+    console.log(req.params.page);
+    console.log(req.params.city);
+    console.log(req.params.category);
+    console.log(req.params.keyword);
+
+    res.send(searchListData);
+});
+
 let server = app.listen(3000, () => {
     "use strict";
     let host = server.address().address;

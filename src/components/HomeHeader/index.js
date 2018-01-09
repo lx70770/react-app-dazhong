@@ -1,13 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
+import SearchInput from '../SearchInput';
 import './Style.less';
 
 export default class HomeHeader extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+    }
+
+    enterHandel(value) {
+        this.props.history.push('/Search/all/' + encodeURIComponent(value));
     }
 
     render() {
@@ -30,7 +36,7 @@ export default class HomeHeader extends React.Component {
                         &nbsp;&nbsp;&nbsp;
                         <i className="icon-search"></i>
                         &nbsp;&nbsp;&nbsp;
-                        <input type="text" placeholder="请输入关键字"/>
+                        <SearchInput value="" enterHandle={this.enterHandel.bind(this)}/>
                     </div>
                 </div>
             </div>

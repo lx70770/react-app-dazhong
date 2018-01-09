@@ -7,8 +7,9 @@ export default class Home extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
+        const id = this.props.match.params.id;
         return (
-            <h1>detail</h1>
+            <h1>detail {id}</h1>
         )
     }
 }
